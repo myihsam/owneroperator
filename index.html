@@ -850,6 +850,11 @@ input[aria-invalid=true],select[aria-invalid=true]{border:2px solid #B32020}
 /* Any remaining light-teal text on light backgrounds */
 .logo .my{color:var(--teal-text)}
 .lpFooter .logo .my{color:#8FBDBC}
+
+/* LAYOUT FIX — the <main> landmark broke the body>section stacking rule,
+   letting the fixed vent/particle layers sit on top of the content. */
+#mainContent{position:relative;z-index:2}
+#mainContent>section,#mainContent>footer{position:relative;z-index:2}
 </style>
 </head>
 <body>
